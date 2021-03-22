@@ -1,0 +1,237 @@
+.sidebarContainer {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: white;
+    color: black;
+  }
+
+  .wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+  }
+  
+  .contentContainer {
+    padding-top: 20px;
+  }
+  
+  .contentLogo {
+    text-decoration: none;
+    font-family: Vladivostok;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 54px;
+    color: #2F281E;
+    padding-left: .8rem;
+  }
+  
+  .sidebarNavigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+    font-family: Vladivostok;
+font-style: normal;
+font-size: 24px;
+line-height: 34px;
+color: #2F281E;
+  }
+  
+  .liNav {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .aNav {
+    padding: 10px 15px 10px 45px;
+    display: block;
+    color: black;
+  }
+  
+  .liNav .fa {
+    margin-right: 10px;
+  }
+  
+  .aNav:active,
+  .aNav:hover,
+  .aNav:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .liNav:before {
+    background-color: #FFEEE1;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+  }
+  
+  .liNav:hover::before {
+    width: 100%;
+  }
+  
+  .header::before {
+    background-color: transparent;
+  }
+
+  .profile {
+    background-color: #FFEEE1;
+    padding: 10px 15px 10px 45px;
+    display: block;
+    color: black;
+  }
+  
+  .header {
+    margin-left: .8rem;
+    padding-left: 0rem;
+    font-weight: bold;
+    color:  black;
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+  }
+
+
+.wrapperHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 3rem;
+    position: relative;
+    width: 100%;
+    line-height: 20px;
+    margin-left: 1rem
+  
+}
+ 
+.wrappMain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  
+}
+
+.fanf{
+  padding: 10px 15px 10px 45px;
+    display: block;
+    color: black;
+
+}
+
+.start{
+  font-size: .95rem;
+  height: 2.3rem;
+  padding: 0 2.4rem;
+  border: 0;
+  border-radius: .5rem;
+  cursor: pointer;
+  background: #FF9900;
+  color: #FFFFFF;
+  margin-top: 1em;
+ margin-left: 69rem;
+}
+
+.fanfic {
+  font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 44px;
+line-height: 54px;
+color: rgb(255, 165, 0)
+}
+
+.modal {
+  inset: 50% auto auto 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    background-color: #FAF0E6;;
+    width: 40rem;
+    border-radius: .5rem;
+}
+
+.mainWrappForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrappButtons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrappForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputColumn{
+  border: 1px solid #ececec;
+  height: 1.7em;
+  width: 15rem;
+
+}
+
+.create{
+  font-size: .95rem;
+  height: 2.3rem;
+  padding: 0 2.4rem;
+  border: 0;
+  border-radius: .5rem;
+  cursor: pointer;
+  background: #52cc00;
+  color: #FFFFFF;
+  margin-top: 1em;
+}
+
+.close {
+  font-size: .95rem;
+  height: 2.3rem;
+  padding: 0 2.4rem;
+  border: 0;
+  border-radius: .5rem;
+  cursor: pointer;
+  background: #ff5100;
+  color: #FFFFFF;
+  margin-top: 1em;
+}
+
+.inputDescription{
+  border: 1px solid #ececec;
+  height: 6em;
+  width: 30rem;
+}
+
+
+.flexButton{
+  display: flex;
+  align-self: end;
+}

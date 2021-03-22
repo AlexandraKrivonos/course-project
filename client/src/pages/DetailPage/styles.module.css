@@ -1,0 +1,215 @@
+.sidebarContainer {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: white;
+    color: black;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    margin-left: 0.5rem;    
+  }
+
+  .wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+  }
+  
+  .contentContainer {
+    padding-top: 20px;
+  }
+  
+  .contentLogo {
+    text-decoration: none;
+    font-family: Vladivostok;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 54px;
+    color: #2F281E;
+    padding-left: .8rem;
+  }
+  
+  .sidebarNavigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+    font-family: Vladivostok;
+font-style: normal;
+font-size: 24px;
+line-height: 34px;
+color: #2F281E;
+  }
+  
+  .liNav {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .aNav {
+    padding: 10px 15px 10px 45px;
+    display: block;
+    color: black;
+  }
+  
+  .liNav .fa {
+    margin-right: 10px;
+  }
+  
+  .aNav:active,
+  .aNav:hover,
+  .aNav:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .liNav:before {
+    background-color: #FFEEE1;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+  }
+  
+  .liNav:hover::before {
+    width: 100%;
+  }
+  
+  .header::before {
+    background-color: transparent;
+  }
+
+  .profile {
+    background-color: #FFEEE1;
+    padding: 10px 15px 10px 45px;
+    display: block;
+    color: black;
+  }
+  
+  .header {
+    margin-left: .8rem;
+    padding-left: 0rem;
+    font-weight: bold;
+    color:  black;
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+  }
+
+
+.wrapperHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 3rem;
+    position: relative;
+    width: 100%;
+    line-height: 20px;
+    margin-left: 1rem
+  
+}
+ 
+.wrappMain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  
+}
+
+.mainContain {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.greeting {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  justify-content:center;
+  align-items:center;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-image: url("./user.png");
+  width: 12rem;
+  height: 12rem;
+  background-position: center;
+  background-size: 100%;
+}
+
+.title {
+  font-family: Vladivostok;
+    font-style: normal;
+    font-size: 44px;
+    line-height: 54px;
+    color: #2F281E;
+    padding-left: 2rem;
+}
+
+.profileMain{
+  display: flex;
+  flex-direction:column; 
+}
+
+.article {
+  font-family: Vladivostok;
+  font-style: normal;
+  font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    color:  #7752BE;
+    padding-left: 20rem;
+    padding-top: 1.5rem;
+}
+
+.pic {
+  padding-right: 0.5rem;
+}
+
+.acticleWrapp {
+  display: flex;
+  flex-direction: row;
+}
+
+.articlePic{ 
+  font-size: 3rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  color: #7752BE;
+  padding-top: 1.5rem;
+}
+
+.articleTitle{
+  font-family: Vladivostok;
+  font-style: normal;
+  font-weight: bold;
+    font-size: 20px;
+    line-height: 54px;
+    color:  #7752BE;
+   
+    padding-top: 1.5rem;
+
+}
+
+
+

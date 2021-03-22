@@ -1,0 +1,74 @@
+.title {
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    color: #2F281E;
+    padding-left: 1rem;
+}
+
+.wrappTitle {
+    margin: 3em 0em 0 5em;
+    display: flex;
+}
+
+.wrappMain {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAF0E6;
+    border-radius: .8rem;
+    margin: 63px 12em 0px 25em;
+    align-items: center;
+    justify-content: center;
+    height: 18rem;
+    width: 29rem;
+}
+
+.titleUp{
+    font-size: 2.1rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.inputColumn{
+    border: 1px solid #ececec;
+    height: 1.7em;
+    width: 15rem;
+  
+}
+
+.labels{
+   
+    font-size: .85rem;
+}
+
+.wrappColumn {
+    height: 100%;
+    width: 100%;
+    display: flex; 
+  justify-content: center;
+align-items: center;
+   flex-direction: column;
+
+}
+
+.Sign {
+    font-size: .95rem;
+    height: 2.3rem;
+    padding: 0 2.4rem;
+    border: 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    background: #FF9900;
+    color: #FFFFFF;
+    width: 9rem;
+    margin-top: 1.5rem;
+    margin-left: 15rem;
+}
+
+.wrappForm {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,115 @@
+.myWrapp{
+    margin: 0.5em 4em 0 4em;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.title{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 46px;
+    padding-top: 0.4em;
+    padding-left: 1em;
+    color: #2F281E;
+    
+
+}
+
+.navWrapp {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+   
+}
+
+.wrappTitle{
+    display: flex;
+    direction: row;
+}
+
+.Sigh{
+    font-size: .95rem;
+    height: 2.3rem;
+    padding: 0 2.4rem;
+    border: 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+.Log{
+    font-size: .95rem;
+    height: 2.3rem;
+    padding: 0 2.4rem;
+    border: 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    background: #FF9900;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.butt {
+    display: flex;
+   
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.wrappMain{
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    margin: 2em 4em 0 4em;
+}
+
+
+.rappSubTitle{
+    display: flex;
+    direction: column;
+    justify-content: center;
+}
+
+.subtitle{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 44px;
+line-height: 54px;
+color: #2F281E;
+}
+
+.discr{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+
+color: #544837;
+}
+
+.start{
+    font-size: .95rem;
+    height: 2.3rem;
+    padding: 0 2.4rem;
+    border: 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    background: #FF9900;
+    color: #FFFFFF;
+    margin-top: 1em;
+}
+
+.black{
+    color:white;
+}

@@ -7,9 +7,13 @@ const router = Router()
 router.post('/generate', async (req, res) => {
     try {
         const baseUrl = config.get ('baseUrl')
-        const {from} = req.body
+        const {title, genre, shortDescription} = req.body
 
-     
+        const fanfic = new Fanfic ({ title, genre, shortDescription})
+        console.log(`${fanfic}`)
+        await fanfic.save()
+
+        res.status(201).json({ message: 'Fanfic created'})
 
               
     } catch (error) {

@@ -43,15 +43,15 @@ import {useHttp} from '../../hooks/http.hook'
                     <h2 className={styles.titleUp}>Sign up</h2>
                 <div className={styles.wrappForm}>
                     <label className={styles.labels}  >Name*</label>
-                        <input type="text" name= "name" className={styles.inputColumn} onChange={changeHandler}></input> 
+                        <input type="text" name= "name" className={styles.inputColumn} onChange={changeHandler} value={form.name}></input> 
                     </div>
                     <div className={styles.wrappForm} >
                     <label className={styles.labels}  >Email*</label>
-                        <input type="email" name= "email" className={styles.inputColumn}onChange={changeHandler}></input> 
+                        <input type="email" name= "email" className={styles.inputColumn}onChange={changeHandler} value={form.email}></input> 
                     </div>
                     <div className={styles.wrappForm}>
                     <label className={styles.labels}  >Password*</label>
-                        <input type="text" name= "password"  className={styles.inputColumn} onChange={changeHandler}></input> 
+                        <input type="text" name= "password"  className={styles.inputColumn} onChange={changeHandler} value={form.password}></input> 
                     </div>
                     <button className={styles.Sign} onClick={registerHandler} disabled={loading}>Sign up</button>
                 </form>

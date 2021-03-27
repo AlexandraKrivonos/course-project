@@ -1,53 +1,38 @@
-import React, {useState, useContext, useCallback, useEffect} from 'react'
-import { useHttp } from '../../hooks/http.hook'
+import React, { useState, useContext, useCallback, useEffect } from "react";
+import { useHttp } from "../../hooks/http.hook";
 
-import Loader from '../../components/Loader'
-import FanficCard from '../../components/FanficCard'
-import styles from './styles.module.css'
+import Loader from "../../components/Loader";
+import FanficCard from "../../components/FanficCard";
+import styles from "./styles.module.css";
 
- const ProfilePage = () => {
+const ProfilePage = () => {
+  const token = JSON.parse(localStorage.getItem("userData")).token;
+  const [fanfics, setFanfics] = useState([]);
+  const { loading, request } = useHttp();
 
-    const {token} = JSON.parse(localStorage.getItem('userData')).token
-    
-     const [fanfics, setFanfics] = useState([])
-     const {loading, request} = useHttp()
-     
-     
+  const fetchFanfics = useCallback(async () => {
+    try {
+      const fetched = await request("api/fanfic", "GET", null, {
+        Authorization: `Bearer ${token}`,
+      });
+      setFanfics(fetched);
+    } catch (e) {}
+  }, [token, request]);
 
-     const fetchFanfics = useCallback(async () => {
-         try {
-             const fetched = await request('api/fanfic', 'GET', null, {
-                Authorization: `Bearer ${token}`
-             }) 
-                  
-   debugger
-         
-             setFanfics(fetched)
-         } catch (e) {
-             
-         }
+  useEffect(() => {
+    fetchFanfics();
+  }, [fetchFanfics]);
 
-     }, [token, request])
+  if (loading) {
+    return <Loader />;
+  }
 
-     useEffect(() => {
-        
-        fetchFanfics()
-        
-    }, [fetchFanfics])
+  return (
+    <div className="wrapper">
+      {<FanficCard fanfics={fanfics} />}
+      <form className="form"> </form>
+    </div>
+  );
+};
 
-    if (loading) {
-        return <Loader />
-
-    }
-
-   
-    return (
-        <div className="wrapper">
-            
-            { <FanficCard fanfics={fanfics} />}
-            
-        </div>
-    )
-}
-
-export default ProfilePage
+export default ProfilePage;

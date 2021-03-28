@@ -1,5 +1,4 @@
 {
-    "port": 5000,
     "jwtSecret" : "krivonos alexandra mordor",
     "mongoUri": "mongodb+srv://alexandra:123456aA@cluster0.jxpwg.mongodb.net/Test?retryWrites=true&w=majority",
     "baseUrl":"http://localhost:500"

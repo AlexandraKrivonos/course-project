@@ -13,7 +13,7 @@ app.use("/api/fanfic", require("./routes/fanfic.routes"));
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(__dirname, "client", "build")));
 
-  app.get("/*", (req, res) => {
+  app.get("*", (req, res) => {
     res.sentFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }

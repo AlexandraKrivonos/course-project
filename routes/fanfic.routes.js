@@ -21,7 +21,7 @@ router.post("/generate", async (req, res) => {
 
     res.status(201).json({ message: "Fanfic created" });
   } catch (error) {
-    console.dir(error);
+  
     res.status(500).json({ message: "Something went wrong, please try again" });
   }
 });
@@ -42,12 +42,12 @@ router.get("/", auth, async (req, res) => {
 router.get("/all", async (req, res) => {
   try {
     const fanfics = await Fanfic.find();
-    console.dir(fanfics.length)
+   
     const fanficsSerialized = fanfics.map((fanfic) => {
       if(!fanfic.author) return { ...fanfic._doc };
         const user = User.findOne({ _id: fanfic.author.toString() }, (err, r) => { return r._doc.name});
       
-      console.dir(fanfic.author.toString())
+      
       
       return { ...fanfic._doc };
     });

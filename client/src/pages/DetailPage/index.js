@@ -11,19 +11,19 @@ import FanficCard from '../../components/FanficCard'
 
 
  const DetailPage = () => { 
-    const { AuthContext } = require("../../context/AuthContext");
-    const auth = useContext(AuthContext);
+    const token =  JSON.parse(localStorage.getItem("userData")).token;
+    
     const [fanfics, setFanfics] = useState([]);
     const { loading, request } = useHttp();
   
     const fetchFanfics = useCallback(async () => {
       try {
         const fetched = await request("api/fanfic", "GET", null, {
-          Authorization: `Bearer ${auth.token}`,
+          Authorization: `Bearer ${token}`,
         });
         setFanfics(fetched);
       } catch (e) {}
-    }, [auth.token, request]);
+    }, [token, request]);
   
     useEffect(() => {
       fetchFanfics();

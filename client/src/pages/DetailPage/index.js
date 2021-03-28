@@ -11,44 +11,35 @@ import FanficCard from '../../components/FanficCard'
 
 
  const DetailPage = () => { 
-    const {AuthContext} = require('../../context/AuthContext')
-    const {token} = useContext(AuthContext)
-    
-    const {request,loading} = useHttp()
-    const fanficId = useParams()
-    const [fanfic, setFanfic] = useState(null)
-    
-
-    const getFanfic = useCallback( async() => {
-        try {
-           const fetched = await request(`/`, 'GET', null, {
-            Authorization: `Bearer ${token}`
-           })
-           setFanfic(fetched)
-        } catch (e) {
-
-        }
-    }, [token, fanficId, request])
-
+    const { AuthContext } = require("../../context/AuthContext");
+    const auth = useContext(AuthContext);
+    const [fanfics, setFanfics] = useState([]);
+    const { loading, request } = useHttp();
+  
+    const fetchFanfics = useCallback(async () => {
+      try {
+        const fetched = await request("api/fanfic", "GET", null, {
+          Authorization: `Bearer ${auth.token}`,
+        });
+        setFanfics(fetched);
+      } catch (e) {}
+    }, [auth.token, request]);
+  
     useEffect(() => {
-        getFanfic()
-    }, [getFanfic])
-
+      fetchFanfics();
+    }, [fetchFanfics]);
+  
     if (loading) {
-        return <Loader />
-
+      return <Loader />;
     }
-
-
-
-   
+  
     return (
 
 <div className={styles.profileMain}>
      <div className={styles.mainContain}>
          <div className={styles.greeting}>
          <form className={styles.avatar}></form>
-    <div className={styles.title}>Hello, ! We missed you!</div>             
+    <div className={styles.title}>Hello, {fanfics.author}! We missed you!</div>             
          </div>
      </div>
      <div className={styles.acticleWrapp}>
@@ -59,7 +50,7 @@ import FanficCard from '../../components/FanficCard'
      <div className={styles.articleTitle}>down</div>
      </div>
      <>
-     {!loading && fanfic && <FanficCard fanfic={fanfic} />}
+     {<FanficCard fanfics={fanfics} />}
      </>
      </div>
 
